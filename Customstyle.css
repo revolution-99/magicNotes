@@ -1,50 +1,35 @@
 body {
-  background-color: #eaf0f1;
-  height: 100%;
-  margin: 0;
+    background-color: #EAF0F1;
 }
 
-.container{
-    /* margin-top: 1px;
-    margin-bottom: 1px; */
-    min-height: 100%;
-}
-.content-inside {
-    padding: 20px;
-    padding-bottom: 100px;
-  }
-  
 #editNav {
-  position: fixed;
-  top: 0;
-  width: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .card {
-  margin: auto;
+    margin: auto;
 }
 
 .h1,
 h1 {
-  margin: 17px 22px 17px 442px;
+    margin: 17px 22px 17px 442px;
 }
 
-.h5,h5 {
-  margin: 5px 193px;
+.h5,
+h5 {
+    margin: 5px 193px;
 }
 
 element.style {
-  width: 502px;
+    width: 502px;
+}
+
+body {
+    height: 1000px;
 }
 
 .card-title {
-  margin: auto;
-}
-
-#notes{
-    margin: 0px 0px 100px 0px;
-}
-.footer{
-    height: 50px;
-    margin-top: -50px;
+    margin: auto;
 }
