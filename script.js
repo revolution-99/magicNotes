@@ -1,7 +1,8 @@
-console.log('MagicNotes')
+// console.log('MagicNotes')
 showNotes();
 
 let addBtn = document.getElementById("addBtn");
+
 addBtn.addEventListener("click", function(e) {
     let addTxt = document.getElementById("addTxt");
     let addTitle = document.getElementById("addTitle");
@@ -31,13 +32,13 @@ function showNotes() {
     }
     let html = "";
     notesObj.forEach(function(element, index) {
-        html += `<div class="noteCard card" id="rupsa" style="width: 18rem;">
+        html += `<div class="noteCard card" id="noteCardId" style="width: 18rem; margin-bottom: 50px">
         <div class="card-body">
-          <h5 class="card-title">Title: ${element.title}</h5>
+          <h5 class="card-title>Title: ${element.title}</h5>
           
           <p class="card-text">${element.text}</p>
-          <a href="#" id="${index}"onclick="deleteNotes(this.id)" class="card-link" >Delete Note</a>
-          <a href="#" id="${index}"onclick="markNotes(this.id)"class="card-link">Important</a>
+          <button type="button" class = "btn btn-danger" href="#" id="${index}"onclick="deleteNotes(this.id)" class="card-link" >Delete Note</button>
+          <button type="button" class = "btn btn-success" href="#" id="${index}"onclick="markNotes(this.id)"class="card-link">Bookmark</button>
         </div>
       </div>`;
 
@@ -46,7 +47,8 @@ function showNotes() {
     if (notesObj.length != 0) {
         notesElem.innerHTML = html;
     } else {
-        notesElem.innerHTML = `Please add a note by clicking "ADD NOTE"`;
+       
+        notesElem.innerHTML = ` <span style='margin-left: 500px; color:red'>Please add a note by clicking "ADD NOTE"</span>`;
     }
 }
 
@@ -71,7 +73,7 @@ function markNotes(markNt) {
     }
     // noteStyl = document.getElementsByClassName('noteCard')[markNt];
     noteStyl = document.querySelectorAll('.noteCard')[markNt];
-    noteStyl.style.backgroundColor = "#F9DDA4";
+    noteStyl.style.backgroundColor = "#12B0E8";
     // console.log("sanu")
     localStorage.setItem("notes", JSON.stringify(notesObj));
 
@@ -91,7 +93,7 @@ searchText.addEventListener("input", function(txt) {
         }
     })
 })
-let searchTitle = document.getElementById('searchTitle');
+let searchTitle = document.getElementById('searchTitle'); +
 searchTitle.addEventListener("input", function(title) {
 
     let inputValTitle = searchTitle.value.toLowerCase();
